@@ -1,7 +1,7 @@
 /* Style the navbar */
 .navbar {
     overflow: hidden;
-    background-color: #333;
+    background-color: #f2f1f1;
     border-radius: 5px;
     display: flex;
     align-items: center;
@@ -10,6 +10,7 @@
 .navbar a img {
     width: 150px;
     height: 80px;
+    border-radius: 10px;
 }
 
 
@@ -17,7 +18,8 @@
 .navbar a {
     float: left;
     display: block;
-    color: white;
+    color: #b1530b;
+    font-size: larger;
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
@@ -26,7 +28,7 @@
 /* Dropdown container */
 .dropdown {
     overflow: hidden;
-    padding-left: 10in;
+    padding-left: 9in;
 }
 
 /* Dropdown button */
@@ -34,10 +36,11 @@
     font-size: 16px;  
     border: none;
     outline: none;
-    color: white;
+    color: #b1530b;
     padding: 14px 20px;
     background-color: inherit;
     font-family: inherit;
+    font-size: larger;
     margin: 0;
 }
 
@@ -55,7 +58,7 @@
 /* Links inside the dropdown */
 .dropdown-content a {
     float: none;
-    color: black;
+    color: #b1530b;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -71,3 +74,38 @@
 .dropdown:hover      .dropdown-content {
     display: block;
 }
+
+
+/* footer styles */
+.footer {
+    overflow: hidden;
+    background-color: #f2f1f1;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.footer-logo,
+.footer-links, 
+.footer-social,
+.footer-baseline{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.footer-logo img{
+    width: 250px;
+    height: 130px;
+    border-radius: 10px;
+}
+
+.footer-links a,
+.footer-social a,
+.footer-baseline p{
+    margin-top: 20px;
+    margin-left: 40px;
+    text-decoration: none;
+    color: #b1530b;
+    font-size: x-large;
+}
+
