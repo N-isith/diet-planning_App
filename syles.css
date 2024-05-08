@@ -1,15 +1,14 @@
 /* Style the navbar */
 .navbar {
     overflow: hidden;
-    background-color: #f2f1f1;
-    border-radius: 5px;
+    background-color: #f9f9f9;
     display: flex;
     align-items: center;
 }
 
 .navbar a img {
-    width: 150px;
-    height: 80px;
+    width: 200px;
+    height: 100px;
     border-radius: 10px;
 }
 
@@ -18,7 +17,7 @@
 .navbar a {
     float: left;
     display: block;
-    color: #b1530b;
+    color: #FA7128;
     font-size: larger;
     text-align: center;
     padding: 14px 20px;
@@ -28,7 +27,7 @@
 /* Dropdown container */
 .dropdown {
     overflow: hidden;
-    padding-left: 9in;
+    padding-left: 8.5in;
 }
 
 /* Dropdown button */
@@ -36,12 +35,16 @@
     font-size: 16px;  
     border: none;
     outline: none;
-    color: #b1530b;
+    color: #FA7128;
     padding: 14px 20px;
     background-color: inherit;
     font-family: inherit;
     font-size: larger;
     margin: 0;
+}
+
+.dropdown .dropbtn .fa-user{
+    font-size: 40px;
 }
 
 /* Dropdown content (hidden by default) */
@@ -60,8 +63,8 @@
 /* Links inside the dropdown */
 .dropdown-content a {
     float: none;
-    color: #b1530b;
-    padding: 12px 16px;
+    color: #FA7128;
+    padding: 10px 11px;
     text-decoration: none;
     display: block;
     text-align: left;
@@ -78,16 +81,34 @@
 }
 
 .signinup{
-    display: flex;
-    margin-left: 8.4in;
+    margin-left: 7in;
+    margin-bottom: 8px;
+}
+
+.signinup button{
+    background-color: #FA7128;
+    border: #f9f9f9;
+    border-radius: 5px;
+}
+.signinup button a{
+    color: aliceblue;
+    font-weight: bold;
+}
+
+
+body{
+    background-image: url("./images/bodyBackground.jpg");
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin: 0px;
 }
 
 
 /* footer styles */
 .footer {
+    margin-top: 400px;
     overflow: hidden;
     background-color: #f2f1f1;
-    border-radius: 5px;
     padding: 20px;
 }
 
@@ -112,7 +133,7 @@
     margin-top: 20px;
     margin-left: 40px;
     text-decoration: none;
-    color: #b1530b;
+    color: #fa7128;
     font-size: x-large;
 }
 
