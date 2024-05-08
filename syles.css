@@ -77,6 +77,11 @@
     display: block;
 }
 
+.signinup{
+    display: flex;
+    margin-left: 8.4in;
+}
+
 
 /* footer styles */
 .footer {
