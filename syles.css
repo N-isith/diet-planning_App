@@ -32,7 +32,7 @@
 
 /* Dropdown button */
 .dropdown .dropbtn {
-    font-size: 16px;  
+    font-size: 16px;
     border: none;
     outline: none;
     color: #FA7128;
@@ -43,7 +43,7 @@
     margin: 0;
 }
 
-.dropdown .dropbtn .fa-user{
+.dropdown .dropbtn .fa-user {
     font-size: 40px;
 }
 
@@ -55,7 +55,7 @@
     width: 130px;
     border-radius: 10px;
     margin-right: 50px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     right: 0;
 }
@@ -76,30 +76,30 @@
 }
 
 /* Show the dropdown menu on hover */
-.dropdown:hover      .dropdown-content {
+.dropdown:hover .dropdown-content {
     display: block;
 }
 
-.signinup{
+.signinup {
     margin-left: 7in;
     margin-bottom: 8px;
 }
 
-.signinup button{
+.signinup button {
     background-color: #FA7128;
     border: #f9f9f9;
     border-radius: 5px;
 }
-.signinup button a{
+
+.signinup button a {
     color: aliceblue;
     font-weight: bold;
 }
 
 
-body{
+body {
     background-image: url("./images/bodyBackground.jpg");
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
     margin: 0px;
 }
 
@@ -113,15 +113,15 @@ body{
 }
 
 .footer-logo,
-.footer-links, 
+.footer-links,
 .footer-social,
-.footer-baseline{
+.footer-baseline {
     display: flex;
     justify-content: center;
     margin: 10px;
 }
 
-.footer-logo img{
+.footer-logo img {
     width: 250px;
     height: 130px;
     border-radius: 10px;
@@ -129,7 +129,7 @@ body{
 
 .footer-links a,
 .footer-social a,
-.footer-baseline p{
+.footer-baseline p {
     margin-top: 20px;
     margin-left: 40px;
     text-decoration: none;
@@ -137,3 +137,68 @@ body{
     font-size: x-large;
 }
 
+/* signup styles*/
+.wholeSignup-bg {
+    position: relative;
+    background-image: url("./images/bodyBackground.jpg");
+    filter: blur(20px);
+    height: 100%;
+}
+
+.antiSignup-bg{
+    position: absolute;
+    margin-top: -7.3in;
+    margin-left: 4.7in;
+}
+
+form {  
+    background-color: #f2f1f1;
+    padding: 50px;
+    width: fit-content;
+    margin: 0 auto;
+    border-radius: 8px;
+    margin-top: 1.5in;
+}
+
+input {
+    width: 500px;
+    height: 40px;
+    margin-bottom: 25px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #fa7128;
+    padding-left: 15px;
+}
+
+label {
+    color: #FA7128;
+    font-size: 20px;
+}
+
+.signup-bt {
+    margin-left: 1.5in;
+    background-color: #FA7128;
+    color: white;
+    border: 0px;
+    border-radius: 5px;
+    width: 150px;
+    height: 40px;
+    font-size: 20px;
+}
+
+.theform .signup-bt {
+    display: block;
+    margin: 0 auto;
+  }
+
+
+.theform .uptoin{
+    margin-left: 1.3in;
+    margin-top: 15px;
+    margin-bottom: -5px;
+}
+
+.uptoin a {
+    text-decoration: none;
+    color: #FA7128;
+}
