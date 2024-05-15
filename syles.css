@@ -24,6 +24,10 @@
     text-decoration: none;
 }
 
+.navbar a:hover{
+    color: #218414;
+}
+
 /* Dropdown container */
 .dropdown {
     overflow: hidden;
@@ -64,7 +68,8 @@
 .dropdown-content a {
     float: none;
     color: #FA7128;
-    padding: 10px 11px;
+    padding: 10px 18px;
+    font-size: 16px;
     text-decoration: none;
     display: block;
     text-align: left;
@@ -73,6 +78,8 @@
 /* Add a dark background on hover */
 .dropdown-content a:hover {
     background-color: #ddd;
+    border-radius: 10px;
+
 }
 
 /* Show the dropdown menu on hover */
@@ -94,6 +101,14 @@
 .signinup button a {
     color: aliceblue;
     font-weight: bold;
+}
+
+.signinup button a:hover{
+    color: aliceblue;
+}
+
+#tosignin:hover{
+    background-color: #218414;
 }
 
 
@@ -137,6 +152,12 @@ body {
     font-size: x-large;
 }
 
+.footer-links a:hover,
+.footer-social a:hover,
+.footer-baseline p:hover{
+    color: #218414;
+}
+
 /* signup  % sign in styles*/
 .wholeSignup-bg, .wholeSignin-bg {
     position: relative;
@@ -145,7 +166,7 @@ body {
     height: 100%;
 }
 
-.antiSignup-bg, .antisignin-bg{
+.antiSignup-bg, .antiSignin-bg{
     position: absolute;
     margin-top: -7.3in;
     margin-left: 4.7in;
@@ -170,6 +191,12 @@ input {
     padding-left: 15px;
 }
 
+input:focus{
+    outline: none;
+    border: 0px solid #218414;
+    box-shadow: 0 0 9px #218414;
+}
+
 label {
     color: #FA7128;
     font-size: 20px;
@@ -185,12 +212,17 @@ label {
     width: 150px;
     height: 40px;
     font-size: 20px;
-}
-
-.theform .signup-bt, .signin-bt {
     display: block;
     margin: 0 auto;
-  }
+}
+
+.signup-bt:hover, 
+.signin-bt:hover{
+    background-color: #218414;
+    scale: 105%;
+    transition-duration: 300ms;
+}
+
 
 
 .theform .uptoin{
@@ -202,4 +234,8 @@ label {
 .uptoin a {
     text-decoration: none;
     color: #FA7128;
+}
+
+.uptoin a:hover{
+    color: #218414;
 }
