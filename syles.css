@@ -137,15 +137,15 @@ body {
     font-size: x-large;
 }
 
-/* signup styles*/
-.wholeSignup-bg {
+/* signup  % sign in styles*/
+.wholeSignup-bg, .wholeSignin-bg {
     position: relative;
     background-image: url("./images/bodyBackground.jpg");
     filter: blur(20px);
     height: 100%;
 }
 
-.antiSignup-bg{
+.antiSignup-bg, .antisignin-bg{
     position: absolute;
     margin-top: -7.3in;
     margin-left: 4.7in;
@@ -175,7 +175,8 @@ label {
     font-size: 20px;
 }
 
-.signup-bt {
+.signup-bt,
+.signin-bt {
     margin-left: 1.5in;
     background-color: #FA7128;
     color: white;
@@ -186,7 +187,7 @@ label {
     font-size: 20px;
 }
 
-.theform .signup-bt {
+.theform .signup-bt, .signin-bt {
     display: block;
     margin: 0 auto;
   }
