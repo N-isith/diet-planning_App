@@ -113,7 +113,7 @@
 
 
 body {
-    background-image: url("./images/bodyBackground.jpg");
+    background-image: url("../images/bodyBackground.jpg");
     font-family: Arial, Helvetica, sans-serif;
     margin: 0px;
 }
