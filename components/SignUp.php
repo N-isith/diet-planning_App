@@ -1,20 +1,5 @@
-<?php 
-
-include("config.php");
-
-if(isset($_POST["signupsubmit"])){
-    $userName = $_POST["userName"];
-    $password = $_POST["password"];
-    
-    $sql = "INSERT INTO signup (Username, Password) VALUES('$userName', '$password')";
-
-    if($con -> query($sql) === true) {
-        echo "<script>alert('Sign up sucessfull.');</script>";
-    } else{
-        echo "Error: " . $sql . "<br>" . $con->error;
-    }
-}
-
+<?php
+    include("../backend/signup.php");
 ?>
 
 <!DOCTYPE html>
@@ -33,7 +18,7 @@ if(isset($_POST["signupsubmit"])){
 
     </div>
     <div class="antiSignup-bg">
-        <form action="" class="sign-up-form">
+        <form action="SignUp.php" method="POST" class="sign-up-form">
             <div class="theform">
                 <div class="for-username">
                     <label for="username">Username: </label><br>
@@ -45,7 +30,11 @@ if(isset($_POST["signupsubmit"])){
                 </div>
                 <div class="for-re-enter-password">
                     <label for="repassword">Re enter Password:</label><br>
-                    <input type="text">
+                    <input type="text" name="repassword">
+                </div>
+                <div class="for-check-dietician">
+                    <label for="isDietician">Do You want to Sign up as a Dietician? </label>
+                    <input type="checkbox" id="isDietician" name="isDietician" value="1">
                 </div>
                 <div>
                     <button class="signup-bt" type="submit" name="signupsubmit">Sign Up</button>

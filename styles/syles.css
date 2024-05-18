@@ -161,7 +161,7 @@ body {
 /* signup  % sign in styles*/
 .wholeSignup-bg, .wholeSignin-bg {
     position: relative;
-    background-image: url("./images/bodyBackground.jpg");
+    background-image: url("../images/bodyBackground.jpg");
     filter: blur(20px);
     height: 100%;
 }
@@ -181,7 +181,25 @@ form {
     margin-top: 1.5in;
 }
 
-input {
+.for-username label,
+.for-password label,
+.for-re-enter-password label {
+    color: #FA7128;
+    font-size: 20px;
+}
+
+.for-check-dietician{
+    size: 5cm;
+    display: flex;
+    gap: 10px;
+    color: #218414;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.for-username input,
+.for-password input,
+.for-re-enter-password input {
     width: 500px;
     height: 40px;
     margin-bottom: 25px;
@@ -191,15 +209,19 @@ input {
     padding-left: 15px;
 }
 
-input:focus{
+.for-username input:focus,
+.for-password input:focus,
+.for-re-enter-password input:focus{
     outline: none;
     border: 0px solid #218414;
     box-shadow: 0 0 9px #218414;
 }
 
-label {
-    color: #FA7128;
-    font-size: 20px;
+.for-check-dietician input[type="checkbox"] {
+    accent-color: #218414;
+    width: 18px;
+    height: 18px;
+    margin-top: -0.5px;
 }
 
 .signup-bt,
@@ -219,8 +241,8 @@ label {
 .signup-bt:hover, 
 .signin-bt:hover{
     background-color: #218414;
-    scale: 105%;
-    transition-duration: 300ms;
+    transform: scale 105%;
+    transition-duration: 500ms;
 }
 
 
@@ -234,6 +256,7 @@ label {
 .uptoin a {
     text-decoration: none;
     color: #FA7128;
+    font-weight: bold;
 }
 
 .uptoin a:hover{
