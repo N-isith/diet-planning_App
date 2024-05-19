@@ -1,32 +1,56 @@
 <?php
-include("config.php");
+    include("config.php");
 
-if(isset($_POST["signupsubmit"])){
-    $userName = $_POST["userName"];
-    $password = $_POST["password"];
-    $repassword = $_POST["repassword"];
-
-    // Check if passwords match
-    if($password !== $repassword) {
-        echo "<script>alert('Passwords do not match.'); window.history.back();</script>";
-        exit();
+    // Function to generate unique IDs
+    function generateID($prefix, $count) {
+        return $prefix . $count;
     }
 
-    $passwordHashed = password_hash($password, PASSWORD_BCRYPT); // Hash the password for security
-    $isDietician = isset($_POST["isDietician"]) ? 1 : 0; // Check if the dietician checkbox is checked
+    if(isset($_POST["signupsubmit"])){
+        $userName = $_POST["userName"];
+        $password = $_POST["password"];
+        $repassword = $_POST["repassword"];
 
-    $sql = "INSERT INTO healthydietsignup (user_id, Username, Password) VALUES('D1', '$userName', '$passwordHashed')";
-
-    if($con->query($sql) === true) {
-        echo "<script>alert('Sign up successful.');</script>";
-        // Redirect based on user type
-        if ($isDietician) {
-            echo "<script>window.location.href = 'DietDashboard.html';</script>";
-        } else {
-            echo "<script>window.location.href = 'PatientDashboard.html';</script>";
+        
+        if($password !== $repassword) {
+            echo "<script>alert('Passwords do not match.'); window.history.back();</script>";
+            exit();
         }
-    } else {
-        echo "Error: " . $sql . "<br>" . $con->error;
+
+        $passwordHashed = password_hash($password, PASSWORD_BCRYPT); 
+        $isDietician = isset($_POST["isDietician"]) ? true : false; 
+        
+        $sqlCount = "SELECT COUNT(*) AS total FROM healthydietsignup WHERE role = 'Dietician'";
+        $result = $con->query($sqlCount);
+        $row = $result->fetch_assoc();
+        $dieticianCount = $row['total'] + 1;
+
+        $sqlCount = "SELECT COUNT(*) AS total FROM healthydietsignup WHERE role = 'Patient'";
+        $result = $con->query($sqlCount);
+        $row = $result->fetch_assoc();
+        $patientCount = $row['total'] + 1;
+
+        
+        if ($isDietician) {
+            $role = 'Dietician';
+            $id = generateID('D', $dieticianCount);
+        } else {
+            $role = 'Patient';
+            $id = generateID('P', $patientCount);
+        }
+
+        $sql = "INSERT INTO healthydietsignup (user_id, Username, Password, role) VALUES ('$id', '$userName', '$passwordHashed', '$role')";
+
+        if($con->query($sql) === true) {
+            if ($isDietician) {
+                echo "<script>alert('Sign up as Dietician successful.');</script>";
+                echo "<script>window.location.href = 'DietDashboard.html';</script>";
+            } else {
+                echo "<script>alert('Sign up successful.');</script>";
+                echo "<script>window.location.href = 'PatientDashboard.html';</script>";
+            }
+        } else {
+            echo "Error: " . $sql . "<br>" . $con->error;
+        }
     }
-}
 ?>
