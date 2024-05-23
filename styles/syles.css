@@ -164,11 +164,12 @@ body {
     background-image: url("../images/bodyBackground.jpg");
     filter: blur(20px);
     height: 100%;
+    margin-top: -20px;
 }
 
 .antiSignup-bg, .antiSignin-bg{
     position: absolute;
-    margin-top: -7.3in;
+    margin-top: -7.7in;
     margin-left: 4.7in;
 }
 

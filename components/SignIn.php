@@ -1,3 +1,7 @@
+<?php 
+    include('../backend/signin.php');
+?>
+
 <html lang="en">
 
 <head>
@@ -13,21 +17,24 @@
 
     </div>
     <div class="antiSignin-bg">
-        <form action="" class="sign-in-form">
+        <form action="SignIn.php" method="POST" class="sign-in-form">
             <div class="theform">
                 <div class="for-username">
                     <label for="username">Username: </label><br>
-                    <input type="text" class="ipt" placeholder="healthydiet@gmail.com">
+                    <input type="text" class="ipt" placeholder="healthydiet@gmail.com" name="userName">
                 </div>
                 <div class="for-password">
                     <label for="password">Password: </label><br>
-                    <input type="text">
+                    <input type="password" name="password">
                 </div>
                 <div>
-                    <button class="signin-bt" type="submit">Sign In</button>
+                    <button class="signin-bt" type="submit" name="signinsubmit">Sign In</button>
                 </div>
             </div>
         </form>
+        <?php if (isset($error)) { ?>
+                    <p><?php echo $error; ?></p>
+                <?php } ?>
     </div>
 
 </body>

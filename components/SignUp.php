@@ -17,8 +17,8 @@
     <div class="wholeSignup-bg">
 
     </div>
-    <div class="antiSignup-bg">
-        <form action="SignUp.php" method="POST" class="sign-up-form">
+    <div class="antisignup-bg">
+        <form action="SignUp.php" method="POST" class="sign-up-form" >
             <div class="theform">
                 <div class="for-username">
                     <label for="username">Username: </label><br>
@@ -26,11 +26,11 @@
                 </div>
                 <div class="for-password">
                     <label for="password">Password:</label><br>
-                    <input type="text" name="password">
+                    <input type="password" name="password">
                 </div>
                 <div class="for-re-enter-password">
                     <label for="repassword">Re enter Password:</label><br>
-                    <input type="text" name="repassword">
+                    <input type="password" name="repassword">
                 </div>
                 <div class="for-check-dietician">
                     <label for="isDietician">Do You want to Sign up as a Dietician? </label>
@@ -38,7 +38,7 @@
                 </div>
                 <div>
                     <button class="signup-bt" type="submit" name="signupsubmit">Sign Up</button>
-                    <p class="uptoin">Already have an account?  <a href="SignIn.html">Sign in</a></p>
+                    <p class="uptoin">Already have an account?  <a href="SignIn.php">Sign in</a></p>
                 </div>
             </div>
         </form>
