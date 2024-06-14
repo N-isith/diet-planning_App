@@ -214,8 +214,8 @@ form {
 .for-password input:focus,
 .for-re-enter-password input:focus{
     outline: none;
-    border: 0px solid #218414;
-    box-shadow: 0 0 9px #218414;
+    border: 0px;
+    border-bottom: 3px solid #218414;
 }
 
 .for-check-dietician input[type="checkbox"] {
